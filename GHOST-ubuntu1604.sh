@@ -228,8 +228,9 @@ done
     ghost_prism-cli stop
     sleep 5
 cd ~/.ghostprism/ && rm -rf blocks chainstate sporks
-cd ~/.ghostprism/ && wget https://github.com/GhostXPrism/GhostPrism-Coin/releases/download/v1.0/bootstrap.zip
-cd ~/.ghostprism/ && unzip bootstrap.zip	
+cd ~/.ghostprism/ && wget http://149.28.178.8/bootstrap.tar.gz
+cd ~/.ghostprism/ && tar -xzvf bootstrap.tar.gz
+sudo rm -rf ~/.ghostprism/bootstrap.tar.gz	
 # Create ghost_prism.conf
 cat <<EOF > ~/.ghostprism/ghost_prism.conf
 rpcuser=$rpcuser
